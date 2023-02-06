@@ -61,24 +61,4 @@ struct ContentView_Previews: PreviewProvider {
     }
 }
 
-struct GameSquareView: View {
-    var proxy: GeometryProxy
-    var body: some View {
-        
-        let size = proxy.size
-        Circle()
-            .foregroundColor(.red).opacity(0.6)
-            .frame(width: size.width/3.5,height: size.width/3.5)
-    }
-}
 
-struct PlayerIndicator: View {
-    
-    var systemImageName: String
-    var body: some View {
-        Image(systemName: systemImageName)
-            .resizable()
-            .frame(width: 40, height: 40)
-            .foregroundColor(.white)
-    }
-}

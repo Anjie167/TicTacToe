@@ -8,18 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		B9809284299000F800B2A884 /* SwiftUi_TicTacToeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9809283299000F800B2A884 /* SwiftUi_TicTacToeApp.swift */; };
-		B9809286299000F800B2A884 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9809285299000F800B2A884 /* ContentView.swift */; };
+		B9809286299000F800B2A884 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9809285299000F800B2A884 /* GameView.swift */; };
 		B9809288299000FB00B2A884 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9809287299000FB00B2A884 /* Assets.xcassets */; };
 		B980928C299000FC00B2A884 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B980928B299000FC00B2A884 /* Preview Assets.xcassets */; };
+		B9809293299013A700B2A884 /* Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9809292299013A700B2A884 /* Alerts.swift */; };
+		B98092952991357E00B2A884 /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98092942991357E00B2A884 /* GameViewModel.swift */; };
+		B980929829913A1B00B2A884 /* Move.swift in Sources */ = {isa = PBXBuildFile; fileRef = B980929729913A1B00B2A884 /* Move.swift */; };
+		B980929D29913AAC00B2A884 /* GameSquareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B980929C29913AAC00B2A884 /* GameSquareView.swift */; };
+		B980929F29913ABF00B2A884 /* PlayerIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B980929E29913ABF00B2A884 /* PlayerIndicator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B9809280299000F800B2A884 /* SwiftUi-TicTacToe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwiftUi-TicTacToe.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9809283299000F800B2A884 /* SwiftUi_TicTacToeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUi_TicTacToeApp.swift; sourceTree = "<group>"; };
-		B9809285299000F800B2A884 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		B9809285299000F800B2A884 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
 		B9809287299000FB00B2A884 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B9809289299000FC00B2A884 /* SwiftUi_TicTacToe.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SwiftUi_TicTacToe.entitlements; sourceTree = "<group>"; };
 		B980928B299000FC00B2A884 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B9809292299013A700B2A884 /* Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alerts.swift; sourceTree = "<group>"; };
+		B98092942991357E00B2A884 /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
+		B980929729913A1B00B2A884 /* Move.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Move.swift; sourceTree = "<group>"; };
+		B980929C29913AAC00B2A884 /* GameSquareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSquareView.swift; sourceTree = "<group>"; };
+		B980929E29913ABF00B2A884 /* PlayerIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerIndicator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,8 +62,10 @@
 		B9809282299000F800B2A884 /* SwiftUi-TicTacToe */ = {
 			isa = PBXGroup;
 			children = (
+				B980929A29913A4D00B2A884 /* viewModel */,
+				B980929929913A3800B2A884 /* view */,
+				B980929629913A0D00B2A884 /* models */,
 				B9809283299000F800B2A884 /* SwiftUi_TicTacToeApp.swift */,
-				B9809285299000F800B2A884 /* ContentView.swift */,
 				B9809287299000FB00B2A884 /* Assets.xcassets */,
 				B9809289299000FC00B2A884 /* SwiftUi_TicTacToe.entitlements */,
 				B980928A299000FC00B2A884 /* Preview Content */,
@@ -67,6 +79,41 @@
 				B980928B299000FC00B2A884 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		B980929629913A0D00B2A884 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				B9809292299013A700B2A884 /* Alerts.swift */,
+				B980929729913A1B00B2A884 /* Move.swift */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		B980929929913A3800B2A884 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				B980929B29913A8D00B2A884 /* components */,
+				B9809285299000F800B2A884 /* GameView.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		B980929A29913A4D00B2A884 /* viewModel */ = {
+			isa = PBXGroup;
+			children = (
+				B98092942991357E00B2A884 /* GameViewModel.swift */,
+			);
+			path = viewModel;
+			sourceTree = "<group>";
+		};
+		B980929B29913A8D00B2A884 /* components */ = {
+			isa = PBXGroup;
+			children = (
+				B980929C29913AAC00B2A884 /* GameSquareView.swift */,
+				B980929E29913ABF00B2A884 /* PlayerIndicator.swift */,
+			);
+			path = components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,7 +186,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B9809286299000F800B2A884 /* ContentView.swift in Sources */,
+				B980929829913A1B00B2A884 /* Move.swift in Sources */,
+				B98092952991357E00B2A884 /* GameViewModel.swift in Sources */,
+				B9809286299000F800B2A884 /* GameView.swift in Sources */,
+				B980929D29913AAC00B2A884 /* GameSquareView.swift in Sources */,
+				B980929F29913ABF00B2A884 /* PlayerIndicator.swift in Sources */,
+				B9809293299013A700B2A884 /* Alerts.swift in Sources */,
 				B9809284299000F800B2A884 /* SwiftUi_TicTacToeApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
